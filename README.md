@@ -1,6 +1,6 @@
 # Eigenvector Centrality on PHP
 
-PHP library to do calculates Eigenvector Centrality of a graph. Eigenvector Centrality is one of the Social Network Analysis algorithms. Basically, this library just translating the [PowerIteration by Aboks](https://github.com/aboks/power-iteration) to the Graph way.
+A PHP library to do calculates Eigenvector Centrality of a graph. Eigenvector Centrality is one of the Social Network Analysis algorithms. Basically, this library just translating the [PowerIteration by Aboks](https://github.com/aboks/power-iteration) to the Graph way.
 
 ## Installation
 
@@ -10,7 +10,9 @@ Install using composer:
 composer require sensasi-delight/eigenvector-cetrality-php
 ```
 
-## Basic usage
+## Usage
+
+The usage examples of this library are also available on [examples folder](https://github.com/sensasi-delight/eigenvector-centrality-php/tree/main/examples).
 
 1. Make a Graph object
 
@@ -69,7 +71,7 @@ composer require sensasi-delight/eigenvector-cetrality-php
 
     ```php
     $result = $g->get_eigenvector_centrality();
-    print_r(result);
+    print_r($result);
     ```
 
     it's should be returning output:
@@ -77,11 +79,11 @@ composer require sensasi-delight/eigenvector-cetrality-php
     ```bash
     Array
     (
-        [node1] => 0.4119172769405
-        [node2] => 0.58253899962505
-        [node3] => 0.4119172769405
-        [node4] => 0.52368294422478
-        [node5] => 0.21691657788138
+        [v1] => 0.4119172769405
+        [v2] => 0.58253899962505
+        [v3] => 0.4119172769405
+        [v4] => 0.52368294422478
+        [v5] => 0.21691657788138
     )
     ```
 

@@ -1,7 +1,6 @@
 {
     "name": "sensasi-delight/eigenvector-centrality-php",
-    "description": "PHP library to do calculates Eigenvector Centrality of a graph. Eigenvector Centrality is one of the Social Network Analysis algorithms. Basically, this library just translating the PowerIteration by Aboks to the Graph way.",
-	"minimum-stability": "stable",
+    "description": "A PHP library to do calculates Eigenvector Centrality of a graph. Eigenvector Centrality is one of the Social Network Analysis algorithms. Basically, this library just translating the PowerIteration by Aboks to the Graph way.",
     "type": "library",
     "license": "MIT",
 	"keywords": ["eigenvector centrality", "social network analysis", "graph", "algorithm"],
@@ -11,11 +10,12 @@
         }
     },
     "authors": [
-        {
-            "name": "Zain Adam",
+		{
+			"name": "Zain Adam",
             "email": "zainadam.id@gmail.com"
         }
     ],
+	"minimum-stability": "stable",
     "require": {
 		"php": "^7.3",
 		"aboks/power-iteration": "^1.0"
