@@ -17,8 +17,9 @@ The usage examples of this library are also available on [examples folder](https
 1. Make a Graph object
 
     ```php
-    use SensasiDelight\EigenvectorCentralityPHP\Graph;
-    $g = new Graph();
+    use SensasiDelight\Graph;
+	
+    $g = new Graph;
     ```
 
 2. Define the nodes (optional)

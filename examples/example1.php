@@ -1,9 +1,11 @@
 <?php
 
-require_once __DIR__ . '/../vendor/autoload.php';
+require_once __DIR__ . '/../vcendor/autoload.php';
 
-use SensasiDelight\EigenvectorCentralityPHP\Graph;
-$g = new Graph();
+use SensasiDelight\Graph;
+
+
+$g = new Graph;
 
 /**
  * 1. Adding nodes (optional)
