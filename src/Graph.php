@@ -1,9 +1,9 @@
 <?php
 
-namespace SensasiDelight\EigenvectorCentralityPHP;
+namespace SensasiDelight;
 
-use SensasiDelight\EigenvectorCentralityPHP\Algorithm;
-use MathPHP\LinearAlgebra\Matrix;
+use SensasiDelight\Algorithm;
+use MathPHP\LinearAlgebra\MatrixFactory;
 
 class Graph
 {
@@ -60,16 +60,21 @@ class Graph
 		return $return;
 	}
 
-	public function toMatrix()
+	public function toArrayMatrix()
 	{
-		$matrix = [];
+		$arrayMatrix = [];
 		foreach ($this->nodes as $i => $node1) {
 			$node_edges = $this->edges[$node1];
 			foreach ($this->nodes as $j => $node2) {
-				$matrix[$i][$j] = in_array($node2, $node_edges) ? 1 : 0;
+				$arrayMatrix[$i][$j] = in_array($node2, $node_edges) ? 1 : 0;
 			}
 		}
 
-		return new Matrix($matrix);
+		return $arrayMatrix;
+	}
+
+	public function toMatrix()
+	{
+		return MatrixFactory::create($this->toArrayMatrix());
 	}
 }

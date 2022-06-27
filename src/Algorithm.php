@@ -1,17 +1,36 @@
 <?php
 
-namespace SensasiDelight\EigenvectorCentralityPHP;
+namespace SensasiDelight;
 
-use Aboks\PowerIteration\PowerIteration;
-use SensasiDelight\EigenvectorCentralityPHP\Graph;
+use MathPHP\LinearAlgebra\MatrixFactory;
+use SensasiDelight\Graph;
 
 class Algorithm
 {
 	public static function eigenvector_centrality(Graph $graph)
 	{
-		$power_iteration = new PowerIteration();
-		$dominant_eigenpair = $power_iteration->getDominantEigenpair($graph->toMatrix());
-		
-		return $dominant_eigenpair->getEigenvector();
+		$eigenvalueMax = max($graph->toMatrix()->eigenvalues());
+		$nNode = count($graph->nodes);
+
+		$arrayMatrix = $graph->toArrayMatrix();
+
+		for ($i=0; $i < $nNode; $i++) {
+			$arrayMatrix[$i][$i] = $arrayMatrix[$i][$i] - $eigenvalueMax;
+		}
+
+		$matrix = MatrixFactory::create($arrayMatrix);
+		$ce = $matrix->rref()->getColumn($nNode-1);
+
+		//sqrt transformation normalization;
+		$rescaleValue = sqrt(array_sum(array_map(function ($c)
+		{
+			return pow($c, 2) ?: 1;
+		}, $ce)));
+
+		foreach ($ce as &$c) {
+			$c = ($c ?: -1) * -1 / $rescaleValue;
+		}
+
+		return $ce;
 	}
 }
