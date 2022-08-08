@@ -1,6 +1,6 @@
 # Eigenvector Centrality on PHP
 
-A PHP library to do calculates Eigenvector Centrality of a graph. Eigenvector Centrality is one of the Social Network Analysis algorithms. Basically, this library just translating the [PowerIteration by Aboks](https://github.com/aboks/power-iteration) to the Graph way.
+A PHP library to do calculates Eigenvector Centrality of a graph. Eigenvector Centrality is one of the Social Network Analysis algorithms.
 
 ## Installation
 
