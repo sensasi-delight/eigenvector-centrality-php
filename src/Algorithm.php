@@ -14,16 +14,15 @@ class Algorithm
 
 		$arrayMatrix = $graph->toArrayMatrix();
 
-		for ($i=0; $i < $nNode; $i++) {
+		for ($i = 0; $i < $nNode; $i++) {
 			$arrayMatrix[$i][$i] = $arrayMatrix[$i][$i] - $eigenvalueMax;
 		}
 
 		$matrix = MatrixFactory::create($arrayMatrix);
-		$ce = $matrix->rref()->getColumn($nNode-1);
+		$ce = $matrix->rref()->getColumn($nNode - 1);
 
 		//sqrt transformation normalization;
-		$rescaleValue = sqrt(array_sum(array_map(function ($c)
-		{
+		$rescaleValue = sqrt(array_sum(array_map(function ($c) {
 			return pow($c, 2) ?: 1;
 		}, $ce)));
 

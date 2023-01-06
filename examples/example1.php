@@ -1,14 +1,13 @@
 <?php
 
-require_once __DIR__ . '/../vcendor/autoload.php';
+require_once __DIR__ . '/../vendor/autoload.php';
 
 use SensasiDelight\Graph;
-
 
 $g = new Graph;
 
 /**
- * 1. Adding nodes (optional)
+ * 1. Adding the nodes (optional)
  */
 $g->add_node('v1');
 $g->add_node('v2');
@@ -17,7 +16,7 @@ $g->add_node('v4');
 $g->add_node('v5');
 
 /**
- * alternative adding nodes
+ * Alternative way to adding the nodes
  */
 // $g->add_nodes_from([
 // 	'v1',
@@ -28,7 +27,7 @@ $g->add_node('v5');
 // ]);
 
 /**
- * 2. Adding edges
+ * 2. Adding the edges
  */
 $g->add_edge('v1', 'v2');
 $g->add_edge('v1', 'v4');
@@ -38,7 +37,7 @@ $g->add_edge('v2', 'v5');
 $g->add_edge('v3', 'v4');
 
 /**
- * alternative for adding edges
+ * Alternative way for adding the edges
  */
 // $g->add_edges_from([
 // 	['v1', 'v2'],
@@ -50,7 +49,7 @@ $g->add_edge('v3', 'v4');
 // ]);
 
 /**
- * get the result
+ * Get and print the calculation result
  */
 $result = $g->get_eigenvector_centrality();
 print_r($result);
