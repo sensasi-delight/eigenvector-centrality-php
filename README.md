@@ -1,28 +1,28 @@
 # Eigenvector Centrality on PHP
 
-A PHP library to do calculates Eigenvector Centrality of a graph. Eigenvector Centrality is one of the Social Network Analysis algorithms.
+A PHP library that help you calculates the Eigenvector Centrality value of an undirected graph. Eigenvector Centrality is one of the Social Network Analysis algorithms.
 
 ## Installation
 
 Install using composer:
 
 ```bash
-composer require sensasi-delight/eigenvector-cetrality-php
+composer require sensasi-delight/eigenvector-centrality-php
 ```
 
 ## Usage
 
-The usage examples of this library are also available on [examples folder](https://github.com/sensasi-delight/eigenvector-centrality-php/tree/main/examples).
+> The usage examples of this library are also available on [examples folder](https://github.com/sensasi-delight/eigenvector-centrality-php/tree/main/examples).
 
 1. Make a Graph object
 
     ```php
     use SensasiDelight\Graph;
-	
+
     $g = new Graph;
     ```
 
-2. Define the nodes (optional)
+1. Define the nodes (optional)
 
     ```php
     $g->add_node('v1');
@@ -44,7 +44,7 @@ The usage examples of this library are also available on [examples folder](https
     ]);
     ```
 
-3. Define the edges
+1. Define the edges
 
     ```php
     $g->add_edge('v1', 'v2');
@@ -68,7 +68,7 @@ The usage examples of this library are also available on [examples folder](https
     ]);
     ```
 
-4. Get and print the Eigenvector Centrality value
+1. Get and print the Eigenvector Centrality value
 
     ```php
     $result = $g->get_eigenvector_centrality();
@@ -77,7 +77,7 @@ The usage examples of this library are also available on [examples folder](https
 
     it's should be returning output:
 
-    ```bash
+    ```php
     Array
     (
         [v1] => 0.4119172769405
@@ -106,6 +106,5 @@ The code is released under the MIT license.
 
 ## Contact
 
-Email - [zainadam.id@gmail.com](mailto:zainadam.id@gmail.com?subject=[GitHub]%20EigenvectorCentralityPHP)
-
-Twitter - [@sensasi_DELIGHT](https://twitter.com/sensasi_DELIGHT)
+- ✉ Email - [zainadam.id@gmail.com](mailto:zainadam.id@gmail.com?subject=[GitHub]%20EigenvectorCentralityPHP)
+- 🐤 Twitter - [@sensasi_DELIGHT](https://twitter.com/sensasi_DELIGHT)

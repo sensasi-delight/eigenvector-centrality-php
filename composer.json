@@ -1,6 +1,6 @@
 {
     "name": "sensasi-delight/eigenvector-centrality-php",
-    "description": "A PHP library to do calculates Eigenvector Centrality of an undirected graph. Eigenvector Centrality is one of the Social Network Analysis algorithms.",
+    "description": "A PHP library that help you calculates the Eigenvector Centrality value of an undirected graph. Eigenvector Centrality is one of the Social Network Analysis algorithms.",
     "type": "library",
     "license": "MIT",
 	"keywords": ["eigenvector centrality", "social network analysis", "graph", "algorithm"],
