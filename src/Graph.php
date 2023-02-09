@@ -28,15 +28,13 @@ class Graph
 
 	public function add_edge($node1, $node2)
 	{
-		if (!in_array($node1, $this->nodes)) {
-			$this->add_node($node1);
-		}
+		$this->add_node($node1);
+		$this->add_node($node2);
 
-		if (!in_array($node2, $this->nodes)) {
-			$this->add_node($node2);
-		}
+		$isNodesConnected = in_array($node1, $this->edges[$node2]);
+		$isNodeItSelf = $node1 === $node2;
 
-		if (!in_array($node2, $this->edges[$node1])) {
+		if (!$isNodesConnected && !$isNodeItSelf) {
 			$this->edges[$node1][] = $node2;
 			$this->edges[$node2][] = $node1;
 		}
